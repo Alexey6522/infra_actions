@@ -1,10 +1,11 @@
+# .github/workflows/**main.yml**
 name: Django-app workflow
 
 on: [push]
 
 jobs:
   tests:
-    # «Раннер» — создание изолированного окружения с последней версией Ubuntu
+    # «Раннер» — создание изолированного окружения с последней версией Ubuntu 
     runs-on: ubuntu-latest
 
     steps:
@@ -12,7 +13,7 @@ jobs:
     # для клонирования репозитория
     - uses: actions/checkout@v2
     - name: Set up Python
-      # Запуск actions setup-python — готового скрипта 
+      # Запуск actions setup-python — готового скрипта
       # для развёртывания окружения Python
       uses: actions/setup-python@v2
       with:
